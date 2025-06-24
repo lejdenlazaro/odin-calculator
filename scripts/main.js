@@ -12,4 +12,12 @@ function isValidOperand(operand){
     return isInteger.test(operand) || isDecimal.test(operand);
 }
 
+const inputBtn = document.querySelectorAll("input");
+
+function execute(e){
+    return;
+}
+
+inputBtn.forEach(input=>input.addEventListener("click",execute));
+
 window.addEventListener("load",updateOperand(DEFAULT_OPERAND));
