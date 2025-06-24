@@ -6,6 +6,10 @@ function updateOperand(newOperand){
     operand = newOperand;
 }
 
+function isDigit(value){
+    return value>="0" && value<="9";
+}
+
 function isValidOperand(operand){
     const isInteger = /(^0$)|(^-?[1-9]+\d*$)/;
     const isDecimal = /(^-?0\.\d*[1-9]+$)|(^-?[1-9]+\d*\.\d*[1-9]+$)/;
