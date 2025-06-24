@@ -16,7 +16,13 @@ const inputBtn = document.querySelectorAll("input");
 const displayCurrent = document.querySelector(".display .current");
 
 function execute(e){
-    return;
+    const value = e.target.value;
+    if(isDigit(value) || value==="."){
+        operand = (operand===DEFAULT_OPERAND)?(value==="."?operand+value:value):((!operand.includes(".") || isDigit(value))?operand+value:operand);
+        const temp = operand;
+        operand = isValidOperand(operand)?operand:temp;
+        displayPrevious.textContent = operand;
+    }
 }
 
 inputBtn.forEach(input=>input.addEventListener("click",execute));
