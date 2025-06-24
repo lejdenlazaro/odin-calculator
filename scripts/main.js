@@ -12,6 +12,11 @@ function updateOperator(newOperator){
     operator = newOperator;
 }
 
+function setDefault(){
+    updateOperand(DEFAULT_OPERAND);
+    updateOperator(DEFAULT_OPERATOR);
+}
+
 function isDigit(value){
     return value>="0" && value<="9";
 }
@@ -37,4 +42,4 @@ function execute(e){
 
 inputBtn.forEach(input=>input.addEventListener("click",execute));
 
-window.addEventListener("load",updateOperand(DEFAULT_OPERAND));
+window.addEventListener("load",setDefault);
