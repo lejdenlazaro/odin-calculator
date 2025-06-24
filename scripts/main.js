@@ -13,6 +13,7 @@ function isValidOperand(operand){
 }
 
 const inputBtn = document.querySelectorAll("input");
+const displayCurrent = document.querySelector(".display .current");
 
 function execute(e){
     return;
