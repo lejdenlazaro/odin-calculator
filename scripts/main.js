@@ -25,7 +25,7 @@ function execute(e){
         operand = (operand===DEFAULT_OPERAND)?(value==="."?operand+value:value):((!operand.includes(".") || isDigit(value))?operand+value:operand);
         const temp = operand;
         operand = isValidOperand(operand)?operand:temp;
-        displayPrevious.textContent = operand;
+        displayCurrent.textContent = operand;
     }
 }
 
