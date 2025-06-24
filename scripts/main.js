@@ -27,6 +27,11 @@ function isValidOperand(operand){
     return isInteger.test(operand) || isDecimal.test(operand);
 }
 
+function isValidOperator(operator){
+    const isOperator = /^[+\-*\/=]$/;
+    return isOperator.test(operator);
+}
+
 const inputBtn = document.querySelectorAll("input");
 const displayCurrent = document.querySelector(".display .current");
 
