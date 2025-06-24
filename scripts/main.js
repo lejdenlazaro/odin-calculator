@@ -1,9 +1,15 @@
 const DEFAULT_OPERAND = "0";
+const DEFAULT_OPERATOR = "=";
 
 let operand;
+let operator;
 
 function updateOperand(newOperand){
     operand = newOperand;
+}
+
+function updateOperator(newOperator){
+    operator = newOperator;
 }
 
 function isDigit(value){
